@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qur'an Recitation Course – Albaseerah Institute</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+  background: url('masjid-pogung-dalangan-DBsQFuIbXg4-unsplash.jpg') center/cover no-repeat;
+  background-color: #000000aa;
+  background-blend-mode: multiply;
+  padding: 120px 20px;
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1.5s;
+}
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #e5b300;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .details div {
+      background: #f5f5f5;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 5px solid #e5b300;
+    }
+    .objective {
+      background: #fff7d6;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #e5b300;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta a {
+      background: #25d366;
+      padding: 15px 25px;
+      color: #fff;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+      margin-top: 40px;
+    }
+      /* Smooth Scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Islamic geometric pattern */
+    body {
+      background-image: url('pattern.png');
+      background-size: 200px;
+    }
+
+    /* Floating Register Button */
+    .float-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #e5b300;
+      padding: 15px 22px;
+      border-radius: 50px;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px #0005;
+      animation: pop 1s infinite alternate;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
+    @keyframes pop { from { transform: scale(1); } to { transform: scale(1.08); }}
+    /* Testimonials Section */
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background: #fdfdfd;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Carousel Container */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Testimonial */
+.testimonial {
+  min-width: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.student-name {
+  color: gold;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Carousel Buttons */
+.carousel-buttons {
+  margin-top: 20px;
+}
+
+.carousel-buttons button {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+  background: gold;
+  color: black;
+}
+/* FAQ Section */
+.faq-section {
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.faq {
+  max-width: 800px;
+  margin: 10px auto;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.faq:hover {
+  background: #f1f1f1;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  display: none;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+  </style>
+  <script>
+    // Countdown to Ramadan 2026 (approx March 10, 2026)
+    const ramadanDate = new Date('March 10, 2026 00:00:00').getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = ramadanDate - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      document.getElementById('countdown').innerHTML = days + ' days left until Ramadan';
+    }, 1000);
+  </script>
+</head>
+<body>
+  <nav style="background:#000; padding:15px; color:#fff; text-align:center; font-size:1.1rem; position:sticky; top:0; z-index:1000;">
+    <strong>Albaseerah Institute</strong>
+  </nav>
+  <header style="animation: fadeIn 1.5s;">
+    <h1>Qur'an Recitation Course for Beginners</h1>
+    <p>Start your Qur'an journey today and prepare yourself before the month of Ramadan approaches.</p>
+    <div id="countdown" style="margin-top:15px; font-size:1.3rem; background:#e5b300; color:#000; display:inline-block; padding:8px 15px; border-radius:8px;"></div>
+  </header>
+
+  <section>
+    <h2>Course Details</h2>
+    <div class="details">
+      <div><strong>Duration:</strong> 3 Months</div>
+      <div><strong>Date:</strong> Dec. 5, 2025 — Feb. 28, 2026</div>
+      <div><strong>Time:</strong> 9:00 pm (Nigerian Time)</div>
+      <div><strong>Days:</strong> Every Friday & Saturday</div>
+      <div><strong>Venue:</strong> Online (Google Meet)</div>
+      <div><strong>Access:</strong> FREE</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Course Objective</h2>
+    <div class="objective">
+      By the end of the course, participants will confidently identify, articulate, and join Arabic letters—enabling them to recite the Qur'an, in shā Allāh.
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Join Before Ramadan?</h2>
+    <p>Ramadan is the month of the Qur'an. Begin now so that when the blessed month arrives, you can read with confidence, clarity, and devotion. Do not wait until Ramadan to start what you can begin today.</p>
+  </section>
+<!-- Testimonials Carousel Section -->
+<section class="testimonials">
+  <h2>What Our Students Say</h2>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+
+      <!-- Testimonial 1 -->
+      <div class="testimonial">
+        <h3 class="student-name">⭐ Ridwan Sanni ⭐</h3>
+        <div class="stars">★★★★★</div>
+        <p>
+          "I thoroughly enjoyed this course! The content was engaging, informative, and relevant to my interests. 
+          The instructor's teaching style was clear and concise, making complex topics easy to understand. 
+          The course materials were well-structured and provided valuable insights that I can apply while 
+          reciting the Qur'an."
+        </p>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial">
+        <h3 class="student-name">⭐ Mumini Jafiya ⭐</h3>
+        <div class="stars">★★★★★</div>
+        <p>
+          "Salaam alaikum wa rahmatullah wa baràkatuhu. Indeed, it is a great pleasure and opportunity to have this institute 
+          initiate this build up to one’s all important journey in life. I am most grateful to Allah (SWT) that strengthened 
+          our resolve to learn how to recite the Quran. May He grant you good in this world and the hereafter.  
+          I would like to continue individual lessons to sustain the tempo — constant practice and recitation of the Qur'an 
+          is the main objective. There's always a lot to learn, unlearn and learn again. JazakhAllahu khairan ya sheikh."
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Carousel Buttons -->
+  <div class="carousel-buttons">
+    <button id="prevBtn">❮</button>
+    <button id="nextBtn">❯</button>
+  </div>
+</section>
+
+  </div>
+</section>
+<!-- FAQ Section -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <!-- 1. Who is this course for? -->
+  <div class="faq">
+    <div class="faq-question">
+      Who is this course for?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      This course is designed for beginners and anyone who wants to learn or improve their Qur’an recitation.
+    </div>
+  </div>
+
+  <!-- 2. Prior knowledge -->
+  <div class="faq">
+    <div class="faq-question">
+      Do I need any prior knowledge?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      No prior knowledge is required. We start from the basics and build up gradually.
+    </div>
+  </div>
+
+  <!-- 3. Course duration -->
+  <div class="faq">
+    <div class="faq-question">
+      How long is the course?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      The course runs for 12 weeks, with structured lessons and regular practice sessions.
+    </div>
+  </div>
+
+  <!-- 4. Live or recorded -->
+  <div class="faq">
+    <div class="faq-question">
+      Is the class live or recorded?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      The class is conducted live, and recordings may be provided where necessary.
+    </div>
+  </div>
+
+  <!-- 5. Joining the free class -->
+  <div class="faq">
+    <div class="faq-question">
+      How do I join the class since the main course is free?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      After completing the registration form, you will be added directly to the Whatsapp class group.  
+      The general course is completely **free**, and no payment is required to join.
+    </div>
+  </div>
+
+  <!-- 6. Paid one-on-one lessons -->
+  <div class="faq">
+    <div class="faq-question">
+      Are there any paid options for more personalised learning?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes. While the main course is free, students who want weekly one-on-one sessions with the tutor  
+      can subscribe to the paid individual class option for personalised correction and faster improvement.
+    </div>
+  </div>
+
+  <!-- 7. Attendance requirement -->
+  <div class="faq">
+    <div class="faq-question">
+      Is attendance compulsory for the live lessons?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes. Attendance to the live sessions is strictly compulsory to ensure proper follow-up, correction,  
+      and steady progress throughout the course.
+    </div>
+  </div>
+
+  <!-- 8. Age limit -->
+  <div class="faq">
+    <div class="faq-question">
+      Is there an age limit for joining the course?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes. The minimum age requirement is 9 years old.  
+      This ensures students can follow instructions, participate, and benefit fully.
+    </div>
+  </div>
+
+  <!-- 9. International availability -->
+  <div class="faq">
+    <div class="faq-question">
+      Can I join the course from outside Nigeria?
+      <span class="arrow">+</span>
+    </div>
+    <div class="faq-answer">
+      Yes, absolutely! Students from any country can join the course since all sessions are online.
+    </div>
+  </div>
+
+</section>
+  <div class="cta">
+    <a href="https://wa.me/2348182609373"> Further enquires: +234 818 260 9373</a>
+  </div>
+
+    <footer>
+    <p>© 2025 Albaseerah Institute</p>
+    <p>
+      <a href="https://wa.me/2348182609373" style="color:#25d366;">Whatsapp</a> |
+      <a href="https://t.me/alBaseeroh_Ins" style="color:#0088cc;">Telegram</a>
+    </p>
+  </footer>
+
+  <a href="https://bit.ly/4ic38FM" class="float-btn">Enroll Now For Free</a>
+  
+  <script>
+  const slide = document.querySelector('.carousel-slide');
+  const testimonials = document.querySelectorAll('.testimonial');
+  let counter = 0;
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    counter++;
+    if (counter >= testimonials.length) counter = 0;
+    slide.style.transform = `translateX(${-counter * 100}%)`;
+  });
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    counter--;
+    if (counter < 0) counter = testimonials.length - 1;
+    slide.style.transform = `translateX(${-counter * 100}%)`;
+  });
+</script>
+<script>
+  const faqs = document.querySelectorAll('.faq');
+
+  faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+      const answer = faq.querySelector('.faq-answer');
+      const arrow = faq.querySelector('.arrow');
+
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        arrow.textContent = "+";
+      } else {
+        answer.style.display = "block";
+        arrow.textContent = "−";
+      }
+    });
+  });
+</script>
+</body>
+</html>
