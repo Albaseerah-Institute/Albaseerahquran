@@ -210,6 +210,59 @@
   font-size: 0.95rem;
   line-height: 1.6;
 }
+@keyframes hadithFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hadith-box {
+  animation: hadithFadeIn 1.8s ease-out forwards;
+}
+@keyframes goldGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(229,179,0,0.25);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(229,179,0,0.55);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(229,179,0,0.25);
+  }
+}
+
+.glow-gold {
+  animation: goldGlow 3s ease-in-out infinite;
+}
+.tutor-section {
+  padding: 50px 20px;
+  background: #fff;
+}
+
+.tutor-section h2 {
+  color: #e5b300;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.tutor-box {
+  background: #f7f7f7;
+  border-left: 5px solid #e5b300;
+  padding: 25px 25px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: #222;
+  box-shadow: 0 0 10px #0002;
+}
   </style>
   <script>
     // Countdown to Ramadan 2026 (approx March 10, 2026)
@@ -229,21 +282,31 @@
   <header style="animation: fadeIn 1.5s;">
     <h1>Qur'an Recitation Course for Beginners</h1>
     <p>Start your Qur'an journey today and prepare yourself before the month of Ramadan approaches.</p>
-    <p style="
-  margin-top:20px;
-  background:#000000aa;
-  padding:12px 18px;
-  border-radius:8px;
-  font-weight:bold;
-  color:#fff;
-  max-width:700px;
-  margin-left:auto;
-  margin-right:auto;
-  font-size:1.1rem;
+<div class="hadith-box glow-gold" style="
+  margin-top:25px;
+  background: rgba(0,0,0,0.65);
+  padding: 18px 22px;
+  border-radius: 12px;
+  border-left: 5px solid #e5b300;
+  font-weight: 600;
+  color: #ffffff;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  backdrop-filter: blur(3px);
 ">
-  “Whoever recites a letter from the Book of Allāh will receive a reward, and each reward will be multiplied tenfold.”  
-  <br><span style="color:#e5b300;">— At-Tirmidhi</span>
-</p>
+  <span style="color:#e5b300; font-size:1.3rem;">❝</span>
+  Whoever recites a letter from the Book of Allāh (Qur'ān) will receive a reward, and each reward will be multiplied tenfold.
+  <span style="color:#e5b300; font-size:1.3rem;">❞</span>
+  <br>
+  <span style="color:#e5b300; font-size:1rem; display:block; margin-top:8px;">
+    — Prophet Muhammad ﷺ
+  </span>
+</div>
+
+</div>
     <div id="countdown" style="margin-top:15px; font-size:1.3rem; background:#e5b300; color:#000; display:inline-block; padding:8px 15px; border-radius:8px;"></div>
   </header>
 
@@ -266,9 +329,27 @@
     </div>
   </section>
 
+<section class="tutor-section">
+  <h2>About the Tutor</h2>
+  <div class="tutor-box">
+    <p>
+      Ustadh AbdulWaahid Yunus is a qualified Qur’an and Arabic instructor with years of experience 
+      teaching beginners how to read the Qur’an correctly from the very foundation. He specialises 
+      in Arabic letter recognition, correct pronunciation (makhārij), and proper joining of letters — 
+      ensuring students develop clarity and confidence in their recitation.
+    </p>
+
+    <p>
+      He is known for his patience, structured teaching style, and step-by-step methodology, making him 
+      especially effective with beginners and those who previously struggled with reading. Ustadh has taught 
+      students from Nigeria, the UK, the United States, and across Africa, helping many recite the Qur’an smoothly 
+      for the first time in their lives.
+    </p>
+  </div>
+</section>
   <section>
     <h2>Why Join Before Ramadan?</h2>
-    <p>Ramadan is the month of the Qur'an. Begin now so that when the blessed month arrives, you can read with confidence, clarity, and devotion. Do not wait until Ramadan to start what you can begin today.</p>
+    <p>Ramadān is the month of the Qur’ān—a time when hearts soften, deeds multiply, and believers reconnect deeply with the Words of Allāh. Preparing for such a blessed month begins long before it arrives. Start your journey now, so that when Ramadān comes, you can read the Qur’ān with confidence, clarity, and heartfelt devotion. Every letter you learn today becomes a light for you tomorrow. Do not wait until Ramadān to begin what you have the opportunity to start right now. Your preparation today is your strength in the month of worship.</p>
   </section>
 <!-- Testimonials Carousel Section -->
 <section class="testimonials">
